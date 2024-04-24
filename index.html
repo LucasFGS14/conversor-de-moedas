@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <main>
+        <h1>💰💵💰💵💰💵💰💵💰💵💰💵💰💵💰</h1>
+
+        <label for="de-moeda">
+            <span>Converter <b>de</b></span>
+            <select disabled name="de-moeda" id="de-moeda">
+                <option value="real">Real (BRL)</option>
+            </select>
+        </label>
+        <label for="para-moeda">
+            <span>Converter <b>para</b></span>
+            <select name="para-moeda" id="para-moeda">
+                <option value="dolar-usa">Dólar dos Estados Unidos (USD)</option>
+                <option value="euro">Euro (EUR)</option>
+                <option value="libra">Libra Esterlina (GBP)</option>
+                <option value="bitcoin">Bitcoin (BTC)</option>
+            </select>
+        </label>
+        <label for="valor">
+            <span>Valor</span>
+            <input id="valor" type="number" placeholder="Digite o valor aqui">
+        </label>
+
+        <button>
+            Converter
+            <span class="material-symbols-outlined">
+                currency_exchange
+            </span>
+        </button>
+
+        <section>
+            <div class="moeda-a-converter">
+                <img src="./assets/real.png" alt="Real">
+                <p>Real (BRL)</p>
+                <p id="valor-moeda-a-ser-convertida">R$ 0,00</p>
+            </div>
+
+            <span id="icon-arrow" class="material-symbols-outlined">
+                south
+            </span>
+            <!-- <img class="arrow" src="./assets/arrow.png" alt="Seta para baixo"> -->
+
+            <div class="moeda-convertida">
+                <img id="img-moeda-convertida" src="./assets/dolar-usa.png" alt="Dólar dos Estados Unidos">
+                <p id="nome-moeda-convertida">Dólar dos Estados Unidos (USD)</p>
+                <p id="valor-moeda-convertida">$0.00</p>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

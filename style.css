@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    width: 40px;
+    margin: 5px 0;
+}
+
+.arrow {
+    width: 30px;
+    margin: 20px 0;
+}
+
+body {
+    background: linear-gradient(aliceblue, rgba(0, 191, 255, 0.33));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon-arrow {
+    margin: 18px 0;
+    font-size: 35px;
+}
+
+main {
+    height: 90vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rgba(187, 187, 187, 0.402);
+}
+
+h1 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+label span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+select {
+    height: 30px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    margin-top: 3px;
+    color: #3d3d3d;
+    cursor: pointer;
+    appearance: none;
+    padding: 0 10px;
+}
+
+select option {
+    background-color: rgba(0, 200, 255, 0.221);
+    font-size: 18px;
+}
+
+input {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    margin-top: 3px;
+    padding: 0 10px;
+    color: #3d3d3d;
+}
+
+button {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 94, 255);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px #9c9c9c;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: white;
+    margin-bottom: 20px;
+}
+
+button span {
+    padding-left: 10px;
+}
+
+button:hover {
+    background-color: rgb(0, 59, 196);
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #3d3d3d;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section div p:first-of-type {
+    margin: 4px 0;
+    color: #3d3d3d;
+}
+
+section div p:last-child {
+    font-weight: 700;
+    color: #3d3d3d;
+}
