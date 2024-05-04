@@ -1,8 +1,3 @@
-const valorDoDolar = 5.13
-const valorDoEuro = 5.49
-const valorDaLibra = 6.39
-const valorDoBitcoin = 341043.44
-
 const btnConverter = document.querySelector("button")
 const inputValor = document.querySelector("#valor")
 const pValorASerConvertido = document.querySelector("#valor-moeda-a-ser-convertida")
@@ -11,7 +6,14 @@ const selectMoedaConvertida = document.querySelector("#para-moeda")
 const imgMoedaConvertida = document.querySelector("#img-moeda-convertida")
 const nomeMoedaConvertida = document.querySelector("#nome-moeda-convertida")
 
-function converter() {
+const converter = async () => {
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    const valorDoDolar = data.USDBRL.high
+    const valorDoEuro = data.EURBRL.high
+    const valorDoBitcoin = data.BTCBRL.high
+    const valorDaLibra = 6.39
+
     if (selectMoedaConvertida.value === "dolar-usa") {
         pValorASerConvertido.innerHTML = new Intl.NumberFormat('pt-BR', {
             style: 'currency',
@@ -58,7 +60,7 @@ function converter() {
     }
 }
 
-function changeOption() {
+const changeOption = () => {
     if (selectMoedaConvertida.value === "dolar-usa") {
         imgMoedaConvertida.src = "./assets/dolar-usa.png"
         nomeMoedaConvertida.innerHTML = "Dólar dos Estados Unidos (USD)"
